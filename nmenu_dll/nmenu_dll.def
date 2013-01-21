@@ -1,0 +1,6 @@
+; nmenu_dll.def : Declares the module parameters for the DLL.
+
+LIBRARY      "nmenu"
+DESCRIPTION  'nmenu Windows Dynamic Link Library'
+
+EXPORTS

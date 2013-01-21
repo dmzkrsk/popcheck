@@ -1,0 +1,398 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\popcheck.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\popcheck.ico"
+IDI_MAILON              ICON    DISCARDABLE     "res\\blue.ico"
+IDI_MAILCHECK           ICON    DISCARDABLE     "res\\yellow.ico"
+IDI_MAILERROR           ICON    DISCARDABLE     "res\\red.ico"
+IDI_MAILOPEN            ICON    DISCARDABLE     "res\\open.ico"
+IDI_MAILOFF             ICON    DISCARDABLE     "res\\normal.ico"
+IDI_WAVE                ICON    DISCARDABLE     "res\\wave.ico"
+IDI_PLAY                ICON    DISCARDABLE     "res\\play.ico"
+IDI_STOP                ICON    DISCARDABLE     "res\\stop.ico"
+IDI_MENU_OPEN           ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_MENU_DROP           ICON    DISCARDABLE     "res\\ico00001.ico"
+IDI_MENU_STOPSOUND      ICON    DISCARDABLE     "res\\menu_nos.ico"
+IDI_MENU_CHECK          ICON    DISCARDABLE     "res\\menuchec.ico"
+IDI_MENU_CHECKALL       ICON    DISCARDABLE     "res\\ico00002.ico"
+IDI_MENU_OPTIONS        ICON    DISCARDABLE     "res\\menu_pti.ico"
+IDI_MENU_ABOUT          ICON    DISCARDABLE     "res\\ico00003.ico"
+IDI_MENU_EXIT           ICON    DISCARDABLE     "res\\ico00004.ico"
+IDI_HIGHP               ICON    DISCARDABLE     "res\\ico00005.ico"
+IDI_LOWP                ICON    DISCARDABLE     "res\\ico00006.ico"
+IDI_NORMP               ICON    DISCARDABLE     "res\\ico00007.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TRAYICON MENU DISCARDABLE 
+BEGIN
+    POPUP "Главное меню"
+    BEGIN
+        MENUITEM "Показать окно",               IDM_OPEN
+        MENUITEM "Сбросить индикатор",          IDM_DROP
+        MENUITEM "Остановить все звуки",        IDC_STOPSOUNDS
+        MENUITEM "Проверить почту",             IDM_CHECKMAIL
+        MENUITEM "Посмотреть всю почту",        ID_CHECKALL
+        MENUITEM "Настройки",                   IDM_OPTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "О Программе",                 IDM_ABOUT
+        MENUITEM "Выход",                       IDM_EXIT
+    END
+END
+
+IDM_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "POPUP"
+    BEGIN
+        MENUITEM "Открыть письмо",              IDM_POPUP_VIEW
+        MENUITEM "Ответить отправителю",        IDM_POPIP_RE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 73
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "О программе..."
+FONT 10, "Comic Sans MS"
+BEGIN
+    LTEXT           "POP Check v1.0 - Postman's best friend\nТрофимов Алексей (с) 2003",
+                    IDC_STATIC,47,17,129,19,SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    LTEXT           "Программа использует свободно распространяемую библиотеку CPop3 by PJ Naughter, класс CTrayIcon by Paul DiLascia и библиотеку NewMenu by Bruno Podetti",
+                    IDC_STATIC,17,37,211,25
+    ICON            IDI_MENU_ABOUT,IDC_STATIC,16,14,20,20
+END
+
+IDD_POPCHECK_DIALOG DIALOGEX 0, 0, 162, 104
+STYLE DS_SYSMODAL | DS_SETFOREGROUND | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | 
+    WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Свежая почта"
+FONT 10, "Arial"
+BEGIN
+    CONTROL         "List2",IDC_MAILS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_AUTOARRANGE | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,7,148,90,
+                    WS_EX_DLGMODALFRAME
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 287, 316
+STYLE DS_SYSMODAL | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Настройки"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Настройки сети",IDC_STATIC,7,7,220,64
+    LTEXT           "Почтовый сервер",IDC_STATIC,18,19,60,8
+    EDITTEXT        IDC_SERVER,86,16,138,14,ES_AUTOHSCROLL
+    LTEXT           "Имя пользователя",IDC_STATIC,13,36,65,8
+    EDITTEXT        IDC_LOGIN,86,34,138,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD,86,52,138,14,ES_PASSWORD | ES_AUTOHSCROLL
+    GROUPBOX        "Проверка",IDC_STATIC,7,74,273,56
+    LTEXT           "Проверять каждые",IDC_STATIC,32,87,66,8
+    EDITTEXT        IDC_TIMER,106,82,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_TSPIN,"msctls_updown32",UDS_ALIGNRIGHT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,251,88,11,14
+    LTEXT           "Минут",IDC_STATIC,148,87,22,8
+    CONTROL         "Проверять при запуске",IDC_CHECKSTART,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,100,96,10
+    CONTROL         "Проверять при востановлении окна",IDC_CHECKRESTORE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,113,138,10
+    GROUPBOX        "Оповещение",IDC_STATIC,7,132,273,78
+    LTEXT           "При получении нового письма",IDC_STATIC,15,142,104,8
+    CONTROL         "Только сменить цвет иконки",IDC_RADIO_ICON,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,30,154,115,10
+    CONTROL         "Открыть окно приложения",IDC_RADIO_OPEN,"Button",
+                    BS_AUTORADIOBUTTON,30,166,107,10
+    CONTROL         "Проиграть звуковой файл",IDC_RADIO_WAVE,"Button",
+                    BS_AUTORADIOBUTTON,30,178,105,10
+    EDITTEXT        IDC_WAVENAME,49,190,145,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Открыть",IDC_CHOOSEWAVE,199,186,26,23,BS_ICON
+    GROUPBOX        "Фильтрация",IDC_STATIC,7,214,273,49
+    LTEXT           "Список писем",IDC_STATIC,15,225,49,8
+    CONTROL         "Отображать все письма в ящике",IDC_SHOWALL,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,30,237,129,10
+    CONTROL         "Отображать только новые письма",IDC_RADIO5,"Button",
+                    BS_AUTORADIOBUTTON,30,249,133,10
+    DEFPUSHBUTTON   "Сохранить",IDOK,176,295,50,14
+    PUSHBUTTON      "Отмена",IDCANCEL,230,295,50,14
+    CONTROL         142,IDC_STATIC,"Static",SS_BITMAP,227,7,53,70
+    LTEXT           "Пароль",IDC_STATIC,52,55,26,8
+    PUSHBUTTON      "",IDC_PLAYWAV,225,186,26,23,BS_ICON
+    PUSHBUTTON      "",IDC_STOPWAV,252,186,26,23,BS_ICON
+    GROUPBOX        "Разное",IDC_STATIC,7,265,273,26
+    CONTROL         "Сбрасывать иконку при открытии главного окна",
+                    IDC_AUTODROP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,29,
+                    275,181,10
+END
+
+IDD_MAILVIEW DIALOG DISCARDABLE  0, 0, 308, 177
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "Письма"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Удалить с сервера",IDOK,7,156,76,14
+    PUSHBUTTON      "Закрыть",IDCANCEL,251,156,50,14
+    EDITTEXT        IDC_EDIT1,7,7,294,68,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    WS_VSCROLL
+    EDITTEXT        IDC_EDIT2,7,89,294,65,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+
+    IDD_POPCHECK_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 155
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 97
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 280
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 309
+    END
+
+    IDD_MAILVIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 301
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "res\\mail.bmp"
+IDB_BITMAP2             BITMAP  DISCARDABLE     "res\\wav.bmp"
+IDR_MENU_TOOLBAR        BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
+IDB_TOOLBAR             BITMAP  DISCARDABLE     "res\\bitmap3.bmp"
+IDB_TOOLBARBW           BITMAP  DISCARDABLE     "res\\bitmap4.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MENU_TOOLBAR TOOLBAR DISCARDABLE  48, 47
+BEGIN
+    BUTTON      IDM_OPEN
+    BUTTON      IDM_DROP
+    BUTTON      IDC_STOPSOUNDS
+    BUTTON      IDM_CHECKMAIL
+    BUTTON      ID_CHECKALL
+    BUTTON      IDM_OPTIONS
+    SEPARATOR
+    BUTTON      IDM_ABOUT
+    BUTTON      IDM_EXIT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "О Программе"
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_OPEN                "Показать окно\nПоказать окно"
+    IDM_CHECKMAIL           "\nПроверить почту"
+    IDM_OPTIONS             "\nНастройки"
+    IDM_EXIT                "\nВыход"
+    IDM_DROP                "\nСбросить состояние индикатора"
+    IDM_ABOUT               "\nО Программе"
+    IDC_STOPSOUNDS          "\nОстановить все звуки"
+    ID_CHECKALL             "\nПолучить всю почту"
+    ID_MENUITEM32783        "IDM_POPIP_RE"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Checks mail on POP servers\0"
+            VALUE "CompanyName", "KSPU\0"
+            VALUE "FileDescription", "popcheck MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 0\0"
+            VALUE "InternalName", "popcheck\0"
+            VALUE "LegalCopyright", "Copyright (C) 2003 Trofimov Alexey\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "popcheck.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "popcheck Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\popcheck.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

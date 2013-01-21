@@ -1,0 +1,6 @@
+; pop3_dll.def : Declares the module parameters for the DLL.
+
+LIBRARY      "pop3"
+DESCRIPTION  'pop3 Windows Dynamic Link Library'
+
+EXPORTS

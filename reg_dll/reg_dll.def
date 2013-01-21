@@ -1,0 +1,6 @@
+; reg_dll.def : Declares the module parameters for the DLL.
+
+LIBRARY      "reg"
+DESCRIPTION  'reg Windows Dynamic Link Library'
+
+EXPORTS

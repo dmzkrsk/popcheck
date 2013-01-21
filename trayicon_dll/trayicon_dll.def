@@ -1,0 +1,6 @@
+; trayicon_dll.def : Declares the module parameters for the DLL.
+
+LIBRARY      "ticon"
+DESCRIPTION  'trayicon Windows Dynamic Link Library'
+
+EXPORTS
